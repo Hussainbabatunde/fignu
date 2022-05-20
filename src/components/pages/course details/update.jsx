@@ -8,12 +8,17 @@ import Secondrow from "./Secondrow";
 import Bottom from "./bottom";
 
 
-const Update = () => {
+const Update = ({nextStep}) => {
+
+    const Next = (e) => {
+        e.preventDefault()
+        nextStep();
+    }
     return(
         <Flex d='flex' w='100%'>
             <Sidebar/>
             <Box d='flex'  w='100%' flexDir='column'>
-            <Box d='flex'  w='100%' flexDir='column' mt={5} ml='2.5%' mr='2.5%'>
+            <Box d='flex'  w='95%' flexDir='column' mt={5} ml='2.5%' mr='2.5%'>
                 <Flex d='flex' justifyContent='space-between'>
                     <Flex>
                     <Image src={uk} w='30px' h='30px'/>
@@ -23,7 +28,7 @@ const Update = () => {
                     </Flex>
                     <Flex d='flex' w='25%' justifyContent='space-between'>
                         <Text>Cancel</Text>
-                        <Button h='30px' backgroundColor="#502BAD" color='white' _hover={{backgroundColor:'none'}}>Save Changes</Button>
+                        <Button onClick={Next} h='30px' backgroundColor="#502BAD" color='white' _hover={{backgroundColor:'none'}}>Save Changes</Button>
                         <Image src={individual} w='30px' h='30px'/>
                     </Flex>
                 </Flex>
