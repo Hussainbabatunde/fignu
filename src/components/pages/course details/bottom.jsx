@@ -4,7 +4,13 @@ import React from 'react';
 
 const Bottom = () => {
     return(
-        <Box backgroundColor='#F7F8FD' w='100%' mt='15px'>
+        <Box backgroundColor='#F7F8FD' w={{
+            sm: '90%',
+            md: '95%',
+            lg: '100%',
+            xl:'100%',
+            base:'90%'
+            }} mt='15px'>
             <Flex d='flex' justifyContent='space-between' w='90%' ml='5%' pt='20px'>
             <Text fontSize='25px'><strong>Lessons:</strong></Text>
             <Button backgroundColor='#75FA92'>+ Add Lesson</Button>

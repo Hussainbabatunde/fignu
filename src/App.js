@@ -6,7 +6,7 @@ import Update from './components/pages/course details/update.jsx';
 function App() {
   return (
     <Flex>
-      <Allcourses />
+      <Courses />
     </Flex>
   );
 }

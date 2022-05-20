@@ -6,7 +6,13 @@ import {BsDot, BsPencil} from 'react-icons/bs';
 
 const Card= () =>{
     return(
-        <Grid templateColumns='repeat(3, 1fr)' mt='10px'>
+        <Grid templateColumns={{
+            sm: 'repeat(1, 1fr)',
+            md: 'repeat(2, 1fr)',
+            lg: 'repeat(3, 1fr)',
+            xl:'repeat(3, 1fr)',
+            base:'repeat(1, 1fr)'
+            }} mt='10px'>
             <Box backgroundColor='white' w='300px' borderRadius='5px'  mb='10px'>
                 <Image src={smile} w='85%' h='150px'  ml='7.5%' mt='20px'/>
                 <Text mt='10px' w='85%' ml='7.5%' fontSize='18px'><strong>The most powerful female traders of all time</strong></Text>

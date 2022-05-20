@@ -18,11 +18,11 @@ const Courses= () => {
     switch(step){
         case 1:
     return(
-        <Update nextStep={nextStep}/>
+        <Allcourses nextStep={nextStep}/>
     );
     case 2: 
     return(
-        <Allcourses/>
+        <Update prevStep={prevStep}/>
     )
     }
 }
