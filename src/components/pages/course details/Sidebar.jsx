@@ -19,12 +19,31 @@ const Sidebar = () => {
 
     return(
         <Flex pos="sticky" h="100vh" w={navSize==='small'? '20%px': "20%"} flexDir="column" backgroundColor="#502BAD">
-            <Flex pl='12%' w='100%' d='flex' h='15vh' alignItems='center'>
+            <Flex pl='12%' w='100%' d='flex' flexDir={{
+            sm: 'column',
+            md: 'column',
+            lg: 'row',
+            xl:'row',
+            base:'column'
+            }} h='15vh' alignItems='center'>
                 <IconButton 
                 background='none'
                 _hover={{background: 'none'}}
-                icon={<FiMenu/>}
-                color='white'
+                icon={<FiMenu display={{
+                    sm: 'block',
+                    md: 'block',
+                    lg: 'none',
+                    xl:'none',
+                    base:'block'
+                    }} style={{outline:'none'}}/>}
+                color='white'                
+                mt={{
+                    sm: '20px',
+                    md: '20px',
+                    lg: '5px',
+                    xl:'5px',
+                    base:'20px'
+                    }}
                 onClick={changed}
                 />
             <Image src={fignu} display={navSize==='small' ? 'none': 'block'} />

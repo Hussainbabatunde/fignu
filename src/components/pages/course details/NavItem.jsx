@@ -11,9 +11,27 @@ const NavItem= ({icon, title, mt, pt, navSize, setNavsize, active}) => {
                 
                 _hover={{textDecoration: 'none'}}>
                 <MenuButton w='100%'>
-                 <Flex mt='5px'>
+                 <Flex mt='5px' flexDir={{
+            sm: 'column',
+            md: 'row',
+            lg: 'row',
+            xl:'row',
+            base:'column'
+            }}>
                     <Icon background='none' _hover={{background: 'none'}} as={icon} fontSize='25px' color={active ? 'white':'gray'} mt='7px'/>
-                    <Text color={active ? 'white':'gray'} ml='3' pt='2' display={navSize==='small' ? 'none': 'block'}>{title}</Text>
+                    <Text color={active ? 'white':'gray'} ml={{
+            sm: '1',
+            md: '3',
+            lg: '3',
+            xl:'3',
+            base:'1'
+            }} pt='2' display={navSize==='small' ? 'none': 'block'} fontSize={{
+            sm: '10px',
+            md: '18px',
+            lg: '25px',
+            xl:'25px',
+            base:'10px'
+            }}>{title}</Text>
                     </Flex>
                 </MenuButton>
                 </Link>
