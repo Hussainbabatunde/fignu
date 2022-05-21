@@ -18,7 +18,7 @@ const Sidebar = () => {
     }
 
     return(
-        <Flex pos="sticky" h="100vh" w={navSize==='small'? '75px': "200px"} flexDir="column" backgroundColor="#502BAD">
+        <Flex pos="sticky" h="100vh" w={navSize==='small'? '20%px': "20%"} flexDir="column" backgroundColor="#502BAD">
             <Flex pl='12%' w='100%' d='flex' h='15vh' alignItems='center'>
                 <IconButton 
                 background='none'

@@ -3,6 +3,7 @@ import React from 'react';
 import Sidebar from '../course details/Sidebar';
 import individual from '../../images/individual.png';
 import Card from './card';
+import description from './desc';
 
 
 const Allcourses= ({nextStep}) => {
@@ -37,7 +38,7 @@ const Allcourses= ({nextStep}) => {
                         <Image src={individual} w='30px' h='30px'/>
                     </Flex>
                 </Flex>
-                <Card/>
+                <Card />
             </Box>
         </Flex>
     )
